@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
-@keyframes disappear {
+@keyframes appear332 {
   from {
     height: 0;
   }
@@ -7,12 +7,28 @@
     height: 332px;
   }
 }
-@keyframes disappear2 {
+@keyframes disappear332 {
   from {
     height: 332px;
   }
   to {
     height: 0;
+  }
+}
+@keyframes appear100 {
+  from {
+    margin-top: -100px;
+  }
+  to {
+    margin-top: 0px;
+  }
+}
+@keyframes disappear100 {
+  from {
+    margin-top: 0px;
+  }
+  to {
+    margin-top: -100px;
   }
 }
 body {
@@ -90,6 +106,7 @@ footer img {
     margin-right: 200px;
   }
   #below1024px,
+  #scrollUpBar,
   #dropdownBar {
     display: none;
   }
@@ -145,7 +162,7 @@ footer img {
   #above1024px {
     display: none;
   }
-  #below1024px {
+  #scrollUpBar {
     height: 100px;
     width: 100%;
     display: flex;
@@ -155,9 +172,14 @@ footer img {
     justify-content: space-around;
     transition: 0.5s;
     z-index: 1;
+    position: absolute;
+    animation-duration: 0.3s;
+    animation-fill-mode: forwards;
+    overflow: hidden;
   }
-  #below1024px a {
-    margin: 0 auto;
+  #below1024px {
+    position: sticky;
+    top: 0px;
   }
   i {
     left: 80px;
@@ -181,6 +203,7 @@ footer img {
     width: 100%;
     height: 332px;
     position: absolute;
+    top: 100px;
     flex-direction: column;
     background-color: #ffffff;
     overflow: hidden;
