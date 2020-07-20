@@ -5,11 +5,11 @@ function adjustScrollPosition() {
     if (nowScroll > 0 && scroll <= nowScroll) {
       scroll = nowScroll;
       document.getElementById("below1024px").style.position = "absolute";
-      now.top = "0px";
+      document.getElementById("dropdownBar").style.top = "0px";
     } else {
       scroll = nowScroll;
       document.getElementById("below1024px").style.position = "fixed";
-      now.top = "100px";
+      document.getElementById("dropdownBar").style.top = "100px";
     }
   };
 }
