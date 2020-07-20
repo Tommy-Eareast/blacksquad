@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Black Squad</title>
+    <link rel="icon" href="./img/logo.png" />
+    <link rel="stylesheet" href="./css/master.css" />
+    <script src="./JavaScript/main.js"></script>
+    <script
+      src="https://kit.fontawesome.com/e259be7b0f.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <nav id="below1024px">
+      <i class="fas fa-bars" onclick="dropdown()"></i>
+      <a id="logo" href="index.html">
+        <img src="./img/logo.png" alt="LOGO" />
+      </a>
+    </nav>
+    <div id="container">
+      <div id="dropdownBar">
+        <a href="game-2.html">GAME</a>
+        <a href="bsq-news.html">NEWS</a>
+        <a href="community.html">COMMUNITY</a>
+        <b id="trigger">LEADERBOARDS</b>
+        <a id="dropdown" href="bsc-ranking-2.html">
+          COMPETITIVE RANKS SEASON 6
+        </a>
+        <b id="trigger">EMBLEM</b>
+        <a id="dropdown" href="emblem-2.html">EMBLEM LIST</a>
+        <a href="support.html">SUPPORT</a>
+        <a
+          href="https://store.steampowered.com/app/550650/Black_Squad/"
+          style="border: none;"
+        >
+          Play Now
+        </a>
+      </div>
+    </div>
+    <main>
+      <video
+        autoplay
+        loop
+        poster="http://www.blacksquad.com/wp-content/uploads/2017/05/bg_main0526.jpg"
+      >
+        <!-- <source media=""src="./video/backgroundvideo.mp4" type="video/mp4" /> -->
+      </video>
+      <audio autoplay>
+        <!-- <source src="./audio/theme.mp3" /> -->
+      </audio>
+      <!-- navigation bar -->
+      <div id="body">
+        <nav id="above1024px">
+          <div id="navigationBar">
+            <a id="logo" href="index.html"
+              ><img src="./img/logo.png" alt="LOGO"
+            /></a>
+            <a href="game-2.html">GAME</a>
+            <a href="bsq-news.html">NEWS</a>
+            <a href="community.html">COMMUNITY</a>
+            <a id="trigger" href="bsc-ranking-2.html">
+              LEADERBOARDS
+              <span id="dropdown"> COMPETITIVE RANKS SEASON 6</span>
+            </a>
+            <a id="trigger" href="emblem-2.html">
+              EMBLEM
+              <span id="dropdown" style="margin-left: 20px;"> EMBLEM LIST</span>
+            </a>
+            <a href="support.html">SUPPORT</a>
+            <a
+              id="playnow"
+              href="https://store.steampowered.com/app/550650/Black_Squad/"
+              >PLAY NOW</a
+            >
+          </div>
+        </nav>
+        <!-- this is the nav bar version when under 1024px width -->
+
+        <!-- navigation bar end -->
+
+        <div id="content">
+          <img src="./img/blacksquad.png" alt="BLACKSQUAD" />
+          Rise of the Real FPS
+        </div>
+      </div>
+      <!-- below is the fixed footer -->
+      <div id="placeholder"></div>
+      <footer>
+        <a href="http://www.nsstudio.co.kr/">
+          <img src="./img/studiologo.png" alt="" />
+        </a>
+        <div id="copyright">© NS STUDIO All Rights Reserved.</div>
+      </footer>
+    </main>
+  </body>
+</html>
