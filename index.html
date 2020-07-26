@@ -12,6 +12,7 @@
     ></script>
   </head>
   <body>
+    <div id="loading"></div>
     <nav id="below1024px">
       <nav id="scrollUpBar">
         <i class="fas fa-bars" onclick="dropdown()"></i>
@@ -22,21 +23,27 @@
       <div id="container">
         <div id="dropdownBar">
           <a href="game-2.html" style="margin-top: 12px;">GAME</a>
+
           <a href="bsq-news.html">NEWS</a>
           <a href="community.html">COMMUNITY</a>
-          <b id="trigger">LEADERBOARDS</b>
-          <a id="dropdown" href="bsc-ranking-2.html">
+          <a href="competition-preseason.html">LEADERBOARDS</a>
+          <!-- <a id="dropdown" href="bsc-ranking-2.html">
             COMPETITIVE RANKS SEASON 6
+          </a> -->
+          <!-- Season 6 just end -->
+          <a onclick="dropdown()">
+            EMBLEM<span class="fas fa-chevron-right"></span>
           </a>
-          <b id="trigger">EMBLEM</b>
-          <a id="dropdown" href="emblem-2.html">EMBLEM LIST</a>
+          <!-- <a id="dropdown" href="emblem-2.html">EMBLEM LIST</a> -->
           <a href="support.html">SUPPORT</a>
-          <a
-            href="https://store.steampowered.com/app/550650/Black_Squad/"
-            style="border: none;"
-          >
-            Play Now
-          </a>
+          <div id="dropdownBarItem" style="border: none;">
+            <a
+              style="border: none;"
+              href="https://store.steampowered.com/app/550650/Black_Squad/"
+            >
+              Play Now
+            </a>
+          </div>
         </div>
       </div>
     </nav>
@@ -63,7 +70,8 @@
             <a href="community.html">COMMUNITY</a>
             <a id="trigger" href="bsc-ranking-2.html">
               LEADERBOARDS
-              <span id="dropdown"> COMPETITIVE RANKS SEASON 6</span>
+              <!-- <span id="dropdown"> COMPETITIVE RANKS SEASON 7</span> -->
+              <!-- Season 6 just end -->
             </a>
             <a id="trigger" href="emblem-2.html">
               EMBLEM
@@ -84,7 +92,7 @@
 
         <div id="content">
           <img src="./img/blacksquad.png" alt="BLACKSQUAD" />
-          Rise of the Real FPS
+          <span id="bottomanimation">Rise of the Real FPS</span>
         </div>
       </div>
       <!-- below is the fixed footer -->

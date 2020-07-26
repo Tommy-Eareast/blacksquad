@@ -1,18 +1,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
 @keyframes appear332 {
   from {
-    height: 0;
+    max-height: 0;
   }
   to {
-    height: 332px;
+    max-height: 332px;
   }
 }
 @keyframes disappear332 {
   from {
-    height: 332px;
+    max-height: 332px;
   }
   to {
-    height: 0;
+    max-height: 0;
   }
 }
 @keyframes appear100 {
@@ -31,6 +31,37 @@
     margin-top: -100px;
   }
 }
+@keyframes bottomappear {
+  from {
+    opacity: 0;
+    height: 0;
+  }
+  to {
+    opacity: 1;
+    height: 200px;
+  }
+}
+@keyframes loading {
+  from {
+    opacity: 1;
+    z-index: 2;
+  }
+  to {
+    opacity: 0;
+    z-index: -3;
+  }
+}
+#loading {
+  animation-name: loading;
+  animation-fill-mode: forwards;
+  animation-duration: 0.3s;
+  background-color: #ffffff;
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
 body {
   margin: 0;
   top: 0;
@@ -42,6 +73,9 @@ body {
   font-family: "Oswald", sans-serif;
   letter-spacing: 1.5px;
   min-height: 543px;
+}
+a {
+  text-decoration: none;
 }
 #dropdown {
   font-size: 14px;
@@ -63,14 +97,20 @@ video {
   height: 94.2%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   color: #ffffff;
 }
 #content img {
   width: 400px;
   height: 50px;
-  margin-top: 120px;
+  margin-top: 320px;
+}
+#bottomanimation {
+  animation-name: bottomappear;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  margin-top: 20px;
 }
 #placeholder {
   height: 110px;
@@ -117,7 +157,6 @@ footer img {
     width: 100%;
   }
   #navigationBar a {
-    text-decoration: none;
     color: #ffffff;
     display: flex;
     justify-content: center;
@@ -133,7 +172,7 @@ footer img {
     display: block;
     text-align: center;
     position: absolute;
-    margin-top: 40px;
+    margin-top: 60px;
     width: 140px;
     opacity: 0;
   }
@@ -168,14 +207,13 @@ footer img {
     display: flex;
     align-items: center;
     top: 0;
-    background-color: #ffffff;
     justify-content: space-around;
+    background-color: #ffffff;
     transition: 0.5s;
     z-index: 1;
     position: absolute;
     animation-duration: 0.3s;
     animation-fill-mode: forwards;
-    overflow: hidden;
   }
   #below1024px {
     position: sticky;
@@ -201,15 +239,13 @@ footer img {
     animation-fill-mode: forwards;
     display: none;
     width: 100%;
-    height: 332px;
     position: absolute;
     top: 100px;
     flex-direction: column;
-    background-color: #ffffff;
     overflow: hidden;
+    background-color: #ffffff;
   }
-  #dropdownBar a,
-  #dropdownBar b {
+  #dropdownBar a {
     border-bottom: solid 1px #d3d3d3;
     margin: 6px 80px;
     padding-bottom: 10px;
@@ -221,12 +257,12 @@ footer img {
     font-size: 14px;
     text-decoration: none;
     transition: 0.5s;
+    cursor: pointer;
   }
-  #dropdownBar b {
-    font-weight: 700;
+  #dropdownBar span {
+    color: #999999;
   }
-  #dropdownBar a:hover,
-  #dropdownBar b:hover {
+  #dropdownBar a:hover {
     color: #ff0000;
     transition: 0.5s;
   }

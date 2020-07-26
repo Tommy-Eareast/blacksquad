@@ -24,7 +24,7 @@ adjustScrollPosition();
 function dropdown() {
   let now = document.getElementById("dropdownBar").style;
   if (now.display == "flex") {
-    toNone = () => (now.display = "none");
+    let toNone = () => (now.display = "none");
     now.animationName = "disappear332";
     setTimeout(toNone, 300);
   } else {
